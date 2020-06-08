@@ -6,6 +6,8 @@ var options = {
     useNewUrlParser: true,
 }
 
+// Connexion base de données Capsule pour users et articles
+
 mongoose.connect('mongodb+srv://lacapsule:EXIrgUdaFEllfNSH@cluster0-9xbpy.mongodb.net/blackboard?authSource=admin&replicaSet=Cluster0-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass%20Community&retryWrites=true&ssl=true',
     options,
     function(err){

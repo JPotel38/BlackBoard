@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <title>BlackBoard</title>
+  <title>BlackBoard</title>
 
-    <!-- Bootstrap core CSS-->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS-->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
-    <!-- Page level plugin CSS-->
-    <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <!-- Page level plugin CSS-->
+  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 
-    <!-- Custom styles for this template-->
-    <link href="css/sb-admin.css" rel="stylesheet">
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin.css" rel="stylesheet">
 
-  </head>
+</head>
 
-  <body id="page-top">
+<body id="page-top">
 
-    <%- include('header') %>
+  <%- include('header') %>
 
-    <div id="wrapper">
+  <div id="wrapper">
 
-      <!-- Sidebar -->
-      <%- include('sidebar') %>
+    <!-- Sidebar -->
+    <%- include('sidebar') %>
 
-      <div id="content-wrapper">
+    <div id="content-wrapper">
 
-        <div class="container-fluid">
+      <div class="container-fluid">
 
-          <div class="list-group">
-            <%for(var i=0;i<taches.length;i++){
+        <div class="list-group">
+          <%for(var i=0;i<taches.length;i++){
               var colorItem;
               var information = "Echéance:" + dateFormat(taches[i].dateDue);
               if(taches[i].dateCloture){
@@ -51,15 +51,15 @@
                 information = "Echéance dépassée: "+dateFormat(taches[i].dateDue)
               }  
             %>
-              <a href="#" class="list-group-item list-group-item-action <%=colorItem%>">
-                <div class="d-flex w-100 justify-content-between">
-                  <h5 class="mb-1"><%=taches[i].category%></h5>
-                  <small>Date de la demande: <%=dateFormat(taches[i].dateInsert)%></small>
-                </div>
-                <p class="mb-1"><%=taches[i].name%></p>
-                <small><%=information%></small>
-            </a>
-            <%}%>
+          <a href="#" class="list-group-item list-group-item-action <%=colorItem%>">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1"><%=taches[i].category%></h5>
+              <small>Date de la demande: <%=dateFormat(taches[i].dateInsert)%></small>
+            </div>
+            <p class="mb-1"><%=taches[i].name%></p>
+            <small><%=information%></small>
+          </a>
+          <%}%>
           </div>
 
 
